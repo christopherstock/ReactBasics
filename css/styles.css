@@ -1,0 +1,17 @@
+
+    body
+    {
+        margin:             50px;
+        text-align:         center;
+        background:         #2d2d2d;
+    }
+
+    div#mainContainer
+    {
+        text-align:         center;
+        overflow:           hidden;
+        margin:             0 auto 0 auto;
+        width:              1000px;
+        height:             667px;
+        background:         #3d3d3d;
+    }
