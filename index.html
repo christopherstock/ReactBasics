@@ -9,15 +9,44 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-        <!-- all ES6 JavaScript sources -->
-        <script src="js/index.js"                type="text/javascript"></script>
-        <script src="js/de/mayflower/rb/Main.js" type="text/javascript"></script>
+        <!-- ES6 library sources -->
+        <script src="https://fb.me/react-0.14.3.js"></script>
+        <script src="https://fb.me/react-dom-0.14.3.js"></script>
+        <script src="http://fb.me/JSXTransformer-0.13.3.js"></script>
+
+
+        <!-- ES6 custom sources -->
+        <script src="js/index.jsx" type="text/jsx"></script>
 
     </head>
     <body>
 
-        <!-- main container containing all components -->
-        <div id="mainContainer"></div>
+
+
+
+
+
+
+    <div id="greeting-div"></div>
+
+
+    <script type="text/jsx">
+      var Greeting = React.createClass({
+        render: function() {
+          return (
+            <p>Hello, Universe</p>
+          )
+        }
+      });
+      React.render(
+        <Greeting/>,
+        document.getElementById('greeting-div')
+      );
+    </script>
+
+
+
+
 
     </body>
 </html>

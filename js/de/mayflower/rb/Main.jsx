@@ -21,6 +21,8 @@
         ***************************************************************************************************************/
         static main()
         {
+            console.log( "Main.main being invoked" );
+
             Main.acclaimAndSetTitle();
             Main.deployReactComponent();
         }
@@ -39,7 +41,20 @@
         ***************************************************************************************************************/
         static deployReactComponent()
         {
-
+            ReactDOM.render(
+                <h1>Hello, world!</h1>,
+                document.getElementById('mainContainer')
+            );
+/*
+            ReactDOM.render(
+                <clicker.ClickerApp
+                    boardSizeX={     boardSizeX     }
+                    boardSizeY={     boardSizeY     }
+                    numberOfColors={ numberOfColors }
+                />,
+                document.getElementById('mainContainer')
+            );
+*/
         }
 
         /***************************************************************************************************************
