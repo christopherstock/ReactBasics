@@ -2,9 +2,10 @@
     /*******************************************************************************************************************
     *   The main class represents the application's entry point.
     *
+    *   TODO INIT   Components
     *   TODO INIT   State
     *   TODO INIT   Properties
-    *   TODO INIT   Components
+    *
     *   TODO INIT   Data flow
     *   TODO INIT   Rendercycle
     *   TODO INIT   Lifecycle callbacks
@@ -21,9 +22,7 @@
         static main()
         {
             Main.acclaimAndSetTitle();
-/*
-            Main.deploy();
-*/
+            Main.deployReactComponent();
         }
 
         /***************************************************************************************************************
@@ -31,9 +30,23 @@
         ***************************************************************************************************************/
         static acclaimAndSetTitle()
         {
-            const APP_TITLE = "ReactBasics, (c) 2017 Mayflower GmbH";
+            document.title = Main.APPLICATION_TITLE();
+            console.log(     Main.APPLICATION_TITLE() );
+        }
 
-            document.title = APP_TITLE;
-            console.log(     APP_TITLE );
+        /***************************************************************************************************************
+        *   Deploys our application's main react component.
+        ***************************************************************************************************************/
+        static deployReactComponent()
+        {
+
+        }
+
+        /***************************************************************************************************************
+        *   Returns the application title.
+        ***************************************************************************************************************/
+        static APPLICATION_TITLE()
+        {
+            return "ReactBasics, (c) 2017 Mayflower GmbH";
         }
     }
