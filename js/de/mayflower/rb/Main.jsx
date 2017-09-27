@@ -39,10 +39,11 @@
         ***************************************************************************************************************/
         static deployReactComponent()
         {
-            ReactDOM.render(
-                <h1>
-                    Hello, test world!
-                </h1>,
+            let tdl = ReactDOM.render(
+                <ToDoList
+                    name={ "Christopher" }
+                >
+                </ToDoList>,
                 document.getElementById('mainContainer')
             );
 /*
@@ -55,6 +56,9 @@
                 document.getElementById('mainContainer')
             );
 */
+            tdl.test();
+
+
         }
 
         /***************************************************************************************************************
