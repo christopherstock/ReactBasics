@@ -9,6 +9,14 @@
     {
 
         // assign title to state
+        constructor()
+        {
+            super();
+
+            this.state = {
+                taskList: "1st entry",
+            }
+        }
 
         /***************************************************************************************************************
         *   Being invoked every time this component renders.
@@ -24,6 +32,8 @@
                 <input type="text" />
                 <button onClick={ this.onCreateButtonClicked }>Create new task</button>
 
+                <div>{ this.state.taskList }</div>
+
             </div>;
         }
 
@@ -34,7 +44,7 @@
         {
             console.log( "The create button has been clicked" );
 
-
+            // check item
 
         }
 
