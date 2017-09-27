@@ -5,7 +5,7 @@
     *   @author  Christopher Stock
     *   @version 1.0
     *******************************************************************************************************************/
-    class ToDoList extends ReactComponent<null, null>
+    class ToDoList
     {
 
 
