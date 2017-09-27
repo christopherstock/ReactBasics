@@ -21,11 +21,8 @@
         ***************************************************************************************************************/
         static main()
         {
-            console.log( "Main.main being invoked" );
-
             Main.acclaimAndSetTitle();
             Main.deployReactComponent();
-
         }
 
         /***************************************************************************************************************
@@ -43,7 +40,9 @@
         static deployReactComponent()
         {
             ReactDOM.render(
-                <h1>Hello, world!</h1>,
+                <h1>
+                    Hello, test world!
+                </h1>,
                 document.getElementById('mainContainer')
             );
 /*
