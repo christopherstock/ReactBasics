@@ -39,33 +39,21 @@
         ***************************************************************************************************************/
         static deployReactComponent()
         {
-            let tdl = ReactDOM.render(
-                <ToDoList
-                    name={ "Christopher" }
-                >
-                </ToDoList>,
-                document.getElementById('mainContainer')
-            );
-/*
             ReactDOM.render(
-                <clicker.ClickerApp
-                    boardSizeX={     boardSizeX     }
-                    boardSizeY={     boardSizeY     }
-                    numberOfColors={ numberOfColors }
+                <ToDoList
+                    title={ Main.APPLICATION_TITLE() }
                 />,
-                document.getElementById('mainContainer')
+                document.getElementById( "mainContainer" )
             );
-*/
-            tdl.test();
-
-
         }
 
         /***************************************************************************************************************
         *   Returns the application title.
+        *
+        *   @return string The application title
         ***************************************************************************************************************/
         static APPLICATION_TITLE()
         {
-            return "ReactBasics, (c) 2017 Mayflower GmbH";
+            return "React ToDo List, (c) 2017 Mayflower GmbH";
         }
     }
