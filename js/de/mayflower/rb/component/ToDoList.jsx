@@ -29,7 +29,7 @@
 
             return <div>
                 <h1>{ this.props.title }</h1>
-                <input type="text" />
+                <input id="userInput" type="text" />
                 <button onClick={ this.onCreateButtonClicked }>Create new task</button>
 
                 <div>{ this.state.taskList }</div>
@@ -44,7 +44,14 @@
         {
             console.log( "The create button has been clicked" );
 
+            let inputField = document.getElementById( "userInput" );
+
+
             // check item
+            console.log( "Text in the box is [" + inputField.value + "]" );
+
+
+
 
         }
 
