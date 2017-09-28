@@ -7,11 +7,10 @@
     *******************************************************************************************************************/
     class ToDoList extends React.Component
     {
-
         // assign title to state
-        constructor()
+        constructor( props )
         {
-            super();
+            super( props );
 
             this.state = {
                 taskList: "1st entry",
@@ -25,12 +24,12 @@
         ***************************************************************************************************************/
         render()
         {
-            console.log( "ToDoList render() being invoked" );
+            console.log( "ToDoList.render() being invoked" );
 
             return <div>
                 <h1>{ this.props.title }</h1>
                 <input id="userInput" type="text" />
-                <button onClick={ this.onCreateButtonClicked }>Create new task</button>
+                <button onClick={ () => { this.onCreateButtonClicked() } }>Create new task</button>
 
                 <div>{ this.state.taskList }</div>
 
@@ -44,16 +43,33 @@
         {
             console.log( "The create button has been clicked" );
 
-            let inputField = document.getElementById( "userInput" );
+            let inputField  = document.getElementById( "userInput" );
+            let enteredText = inputField.value.trim();
 
+            // check entered text
+            console.log( "Trimmed text in the box is [" + enteredText + "]" );
+            if ( enteredText.length === 0 )
+            {
+                alert( "Please enter a text in the task definition field!" );
+                return;
+            }
 
-            // check item
-            console.log( "Text in the box is [" + inputField.value + "]" );
+            //clear the input field
+            inputField.value = "";
 
-
-
-
-        }
+            // set new state - force the component to render
+            this.setState(
+                {
+                    taskList: this.state.taskList + "<br />" + enteredText
+                }
+            );
+/*
+            this.state = {
+                taskList: this.state.taskList + "<br />" + enteredText
+            };
+*/
+            this.render();
+        };
 
         /***************************************************************************************************************
         *   Tests state updating forcing this component to re-render.
