@@ -13,7 +13,7 @@
             super( props );
 
             this.state = {
-                taskList: "1st entry",
+                taskList: [ "Entry 1", "Entry 2" ],
                 inputFieldClass: "",
             }
         }
@@ -27,11 +27,17 @@
         {
             console.log( "ToDoList.render() being invoked" );
 
+            let itemKey = 0;
+
             return <div>
                 <h1>{ this.props.title }</h1>
                 <input id="userInput" className={ this.state.inputFieldClass } type="text" /><br />
                 <button id="userButton" onClick={ () => { this.onCreateButtonClicked() } }>Create ToDo</button>
-                <ul>{ this.state.taskList }</ul>
+                <ul>
+                {
+                    this.state.taskList.map( function( item ) { return <li key={ itemKey++ }>{ item }</li>; } )
+                }
+                </ul>
             </div>;
         }
 
@@ -56,17 +62,23 @@
                 // set new state forcing the component to re-render
                 this.setState(
                     {
+
+                        // TODO prune?
+
                         taskList:        this.state.taskList,
-                        inputFieldClass: "error"
+
+                        inputFieldClass: "error",
                     }
                 );
             }
             else
             {
+                // TODO splice!
+
                 // set new state forcing the component to re-render
                 this.setState(
                     {
-                        taskList:        this.state.taskList + ", " + enteredText,
+                        taskList:        this.state.taskList,
                         inputFieldClass: ""
                     }
                 );
