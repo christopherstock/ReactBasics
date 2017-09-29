@@ -20,9 +20,9 @@
             return <div>
 
                 { /* task list */ }
-                <ul id="todoList">
+                <ul id="taskList">
                 {
-                    this.createToDoListItems()
+                    this.createTaskListItems()
                 }
                 </ul>
 
@@ -32,7 +32,7 @@
         /***************************************************************************************************************
         *   Creates and returns all items of the task list.
         ***************************************************************************************************************/
-        createToDoListItems()
+        createTaskListItems()
         {
             let itemKey = 0;
 

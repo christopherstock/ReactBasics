@@ -29,7 +29,7 @@
         ***************************************************************************************************************/
         render()
         {
-            console.log( "ToDoList.render() being invoked" );
+            console.log( "App.render() being invoked" );
 
             return <div>
 
@@ -98,7 +98,7 @@
         ***************************************************************************************************************/
         componentWillMount()
         {
-            console.log( "ToDoList.componentWillMount() being invoked" );
+            console.log( "App.componentWillMount() being invoked" );
         }
 
         /***************************************************************************************************************
@@ -106,7 +106,7 @@
         ***************************************************************************************************************/
         componentDidMount()
         {
-            console.log( "ToDoList.componentDidMount() being invoked" );
+            console.log( "App.componentDidMount() being invoked" );
         }
 
         /***************************************************************************************************************
@@ -118,7 +118,7 @@
         ***************************************************************************************************************/
         componentWillUpdate( nextProps, nextState, nextContext )
         {
-            console.log( "ToDoList.componentWillUpdate() being invoked" );
+            console.log( "App.componentWillUpdate() being invoked" );
         }
 
         /***************************************************************************************************************
@@ -129,7 +129,7 @@
         ***************************************************************************************************************/
         componentWillReceiveProps( nextProps, nextContext )
         {
-            console.log( "ToDoList.componentWillReceiveProps() being invoked" );
+            console.log( "App.componentWillReceiveProps() being invoked" );
         }
 
         /***************************************************************************************************************
@@ -137,7 +137,7 @@
         ***************************************************************************************************************/
         componentDidUpdate()
         {
-            console.log( "ToDoList.componentDidUpdate() being invoked" );
+            console.log( "App.componentDidUpdate() being invoked" );
         }
 
         /***************************************************************************************************************
@@ -145,7 +145,7 @@
         ***************************************************************************************************************/
         componentWillUnmount()
         {
-            console.log( "ToDoList.componentWillUnmount() being invoked" );
+            console.log( "App.componentWillUnmount() being invoked" );
         }
 
         /***************************************************************************************************************
@@ -159,7 +159,7 @@
         ***************************************************************************************************************/
         shouldComponentUpdate( nextProps, nextState, nextContext )
         {
-            console.log( "ToDoList.shouldComponentUpdate() being invoked" );
+            console.log( "App.shouldComponentUpdate() being invoked" );
 
             return true;
         }
