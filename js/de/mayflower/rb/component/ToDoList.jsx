@@ -26,8 +26,6 @@
         {
             console.log( "ToDoList.render() being invoked" );
 
-            let itemKey = 0;
-
             return <div>
                 <h1 id="title">{ this.props.title }</h1>
                 <input id="userInput" type="text" /><br />
@@ -36,10 +34,25 @@
                 {
                     // TODO outsource to function?
 
-                    this.state.taskList.map( function( item ) { return <li key={ itemKey++ }>{ item }</li>; } )
+                    this.createToDoListItems()
                 }
                 </ul>
             </div>;
+        }
+
+        /***************************************************************************************************************
+        *   Creates and returns all items of the task list.
+        ***************************************************************************************************************/
+        createToDoListItems()
+        {
+            let itemKey = 0;
+
+            return this.state.taskList.map(
+                function( item )
+                {
+                    return <li key={ itemKey++ }>{ item }</li>;
+                }
+            );
         }
 
         /***************************************************************************************************************

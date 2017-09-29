@@ -77,13 +77,17 @@
 
     ul#todoList
     {
-        background:         #c0c0c0;
         list-style-type:    none;
-        width:              80px;
         margin:             15px auto 15px auto;
+        padding:            0;
     }
+
+    @keyframes fadeIn { from { opacity: 0.0; } to { opacity: 1.0; } }
 
     ul#todoList li
     {
         border:             1px solid #646464;
+        animation:          fadeIn 1.0s ease-in;
+        background:         #ff0000;
+        margin:             20px;
     }
