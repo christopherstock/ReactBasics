@@ -5,7 +5,7 @@
     *   @author  Christopher Stock
     *   @version 1.0
     *******************************************************************************************************************/
-    class ToDoList extends React.Component
+    class App extends React.Component
     {
         // assign title to state
         constructor( props )
@@ -26,12 +26,12 @@
         {
             console.log( "ToDoList.render() being invoked" );
 
-            return <div id="test">
+            return <div>
 
                 { /* title */ }
                 <h1 id="title">{ this.props.title }</h1>
 
-                { /* input field */ }
+                { /* task input form */ }
                 <form onSubmit={ ( event ) => { this.onFormSubmit( event ); } }>
                     <input id="userInput" type="text" />
                     <br />

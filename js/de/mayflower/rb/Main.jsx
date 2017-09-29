@@ -59,7 +59,7 @@
         static deployReactComponent()
         {
             ReactDOM.render(
-                <ToDoList
+                <App
                     title={ Main.APPLICATION_TITLE() }
                 />,
                 document.getElementById( "mainContainer" )
@@ -73,6 +73,6 @@
         ***************************************************************************************************************/
         static APPLICATION_TITLE()
         {
-            return "React ToDo List";
+            return "React Task List";
         }
     }
