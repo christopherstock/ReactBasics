@@ -33,7 +33,7 @@
 
             return <div>
                 <h1>{ this.props.title }</h1>
-                <input id="userInput" className={ this.state.inputFieldClass } type="text" /><br />
+                <input id="userInput" type="text" /><br />
                 <button id="userButton" onClick={ () => { this.onCreateButtonClicked() } }>Create ToDo</button>
                 <ul>
                 {
@@ -61,6 +61,8 @@
             console.log( "Trimmed text in the box is [" + enteredText + "]" );
             if ( enteredText.length === 0 )
             {
+                document.getElementById( "userInput" ).className = "error";
+
                 // set new state forcing the component to re-render
                 this.setState(
                     {
@@ -68,8 +70,6 @@
                         // TODO prune?
 
                         taskList:        this.state.taskList,
-
-                        inputFieldClass: "error",
                     }
                 );
             }
@@ -83,11 +83,12 @@
 
                 console.log( "2 >> " + newTaskList.length );
 
+                document.getElementById( "userInput" ).className = "";
+
                 // set new state forcing the component to re-render
                 this.setState(
                     {
                         taskList:        newTaskList,
-                        inputFieldClass: ""
                     }
                 );
             }
