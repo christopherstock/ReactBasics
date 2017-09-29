@@ -10,7 +10,7 @@
     *   OK 1. JSX
     *   OK 2. Components
     *   OK 3. Properties
-    *   OK 4. State
+    *   OK 4. State ( stateless and statefull components )
     *
     *   TODO 5. data flow
     *

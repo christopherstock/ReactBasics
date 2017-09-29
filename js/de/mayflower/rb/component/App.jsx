@@ -1,13 +1,18 @@
 
     /*******************************************************************************************************************
     *   Represents the entire application component.
+    *   This is an example for a stateful component.
     *
     *   @author  Christopher Stock
     *   @version 1.0
     *******************************************************************************************************************/
     class App extends React.Component
     {
-        // assign title to state
+        /***************************************************************************************************************
+        *   Creates a new App component..
+        *
+        *   @param props The initial properties being passed in the component tag.
+        ***************************************************************************************************************/
         constructor( props )
         {
             super( props );
@@ -39,28 +44,11 @@
                 </form>
 
                 { /* task list */ }
-                <ul id="todoList">
-                {
-                    this.createToDoListItems()
-                }
-                </ul>
+                <TaskList
+                    taskList={ this.state.taskList }
+                />
 
             </div>;
-        }
-
-        /***************************************************************************************************************
-        *   Creates and returns all items of the task list.
-        ***************************************************************************************************************/
-        createToDoListItems()
-        {
-            let itemKey = 0;
-
-            return this.state.taskList.map(
-                function( item )
-                {
-                    return <li key={ itemKey++ }>{ item }</li>;
-                }
-            );
         }
 
         /***************************************************************************************************************
