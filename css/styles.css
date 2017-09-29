@@ -54,7 +54,7 @@
         background:         #ff7086;
     }
 
-    input#userButton
+    input#submitButton
     {
         border-radius:      10px;
         border:             0;
@@ -66,14 +66,15 @@
         transition:         background 0.5s ease-in;
         padding:            0 10px 0 10px;
         margin:             15px 0 0 0;
+        cursor:             pointer;
     }
 
-    input#userButton:hover
+    input#submitButton:hover
     {
         background:         #646464;
     }
 
-    input#userButton:active
+    input#submitButton:active
     {
         background:         #3d3d3d;
         transition:         background 0.0s ease-in;

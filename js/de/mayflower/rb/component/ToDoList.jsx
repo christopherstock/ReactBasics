@@ -35,7 +35,7 @@
                 <form onSubmit={ ( event ) => { this.onFormSubmit( event ); } }>
                     <input id="userInput" type="text" />
                     <br />
-                    <input id="userButton" type="submit" value="Create Task" />
+                    <input id="submitButton" type="submit" value="Create Task" />
                 </form>
 
                 { /* task list */ }
@@ -104,4 +104,75 @@
                 }
             )
         };
+
+        /***************************************************************************************************************
+        *   Being invoked before this component has been mounted.
+        ***************************************************************************************************************/
+        componentWillMount()
+        {
+            console.log( "ToDoList.componentWillMount() being invoked" );
+        }
+
+        /***************************************************************************************************************
+        *   Being invoked after this component has been mounted.
+        ***************************************************************************************************************/
+        componentDidMount()
+        {
+            console.log( "ToDoList.componentDidMount() being invoked" );
+        }
+
+        /***************************************************************************************************************
+        *   Being invoked before this component has been unmounted.
+        *
+        *   @param nextProps   The props to set on updating.
+        *   @param nextState   The state to set on updating.
+        *   @param nextContext The context to set on updating.
+        ***************************************************************************************************************/
+        componentWillUpdate( nextProps, nextState, nextContext )
+        {
+            console.log( "ToDoList.componentWillUpdate() being invoked" );
+        }
+
+        /***************************************************************************************************************
+        *   Being invoked before this component receives props.
+        *
+        *   @param nextProps   The props to set on updating.
+        *   @param nextContext The context to set on updating.
+        ***************************************************************************************************************/
+        componentWillReceiveProps( nextProps, nextContext )
+        {
+            console.log( "ToDoList.componentWillReceiveProps() being invoked" );
+        }
+
+        /***************************************************************************************************************
+        *   Being invoked after this component has been updated.
+        ***************************************************************************************************************/
+        componentDidUpdate()
+        {
+            console.log( "ToDoList.componentDidUpdate() being invoked" );
+        }
+
+        /***************************************************************************************************************
+        *   Being invoked before this component has been unmounted.
+        ***************************************************************************************************************/
+        componentWillUnmount()
+        {
+            console.log( "ToDoList.componentWillUnmount() being invoked" );
+        }
+
+        /***************************************************************************************************************
+        *   Being invoked before this component has been unmounted.
+        *
+        *   @param nextProps   The props to set on updating.
+        *   @param nextState   The state to set on updating.
+        *   @param nextContext The context to set on updating.
+        *
+        *   @return boolean
+        ***************************************************************************************************************/
+        shouldComponentUpdate( nextProps, nextState, nextContext )
+        {
+            console.log( "ToDoList.shouldComponentUpdate() being invoked" );
+
+            return true;
+        }
     }
