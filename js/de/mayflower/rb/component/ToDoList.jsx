@@ -29,11 +29,13 @@
             let itemKey = 0;
 
             return <div>
-                <h1>{ this.props.title }</h1>
+                <h1 id="title">{ this.props.title }</h1>
                 <input id="userInput" type="text" /><br />
                 <button id="userButton" onClick={ () => { this.onCreateButtonClicked() } }>Create ToDo</button>
-                <ul>
+                <ul id="todoList">
                 {
+                    // TODO outsource to function?
+
                     this.state.taskList.map( function( item ) { return <li key={ itemKey++ }>{ item }</li>; } )
                 }
                 </ul>

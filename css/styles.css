@@ -4,8 +4,14 @@
         margin:             50px;
         text-align:         center;
         background:         #3d3d3d;
-        font:               20px "Century Gothic", Futura, sans-serif;
         color:              #3d3d3d;
+        font-family:        Century Gothic, Futura, sans-serif;
+    }
+
+    h1#title
+    {
+        font-size:          35px;
+        margin:             15px 0 0 0;
     }
 
     div#mainContainer
@@ -26,7 +32,7 @@
         border:             solid 1px #3d3d3d;
         border-radius:      10px;
         padding:            0 10px 0 10px;
-        margin:             15px;
+        margin:             15px 0 0 0;
         outline:            none;
         text-align:         center;
         font-size:          15px;
@@ -55,6 +61,7 @@
         background:         #8c8c8c;
         transition:         background 0.5s ease-in;
         padding:            0 10px 0 10px;
+        margin:             15px 0 0 0;
     }
 
     button#userButton:hover
@@ -65,4 +72,18 @@
     button#userButton:active
     {
         background:         #3d3d3d;
+        transition:         background 0.0s ease-in;
+    }
+
+    ul#todoList
+    {
+        background:         #c0c0c0;
+        list-style-type:    none;
+        width:              80px;
+        margin:             15px auto 15px auto;
+    }
+
+    ul#todoList li
+    {
+        border:             1px solid #646464;
     }
