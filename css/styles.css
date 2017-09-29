@@ -54,6 +54,7 @@
         color:              #ffffff;
         background:         #646464;
         transition:         background 0.5s ease-in;
+        padding:            0 10px 0 10px;
     }
 
     button#userButton:hover

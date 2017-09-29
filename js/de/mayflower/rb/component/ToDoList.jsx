@@ -30,8 +30,8 @@
             return <div>
                 <h1>{ this.props.title }</h1>
                 <input id="userInput" className={ this.state.inputFieldClass } type="text" /><br />
-                <button id="userButton" onClick={ () => { this.onCreateButtonClicked() } }>Create new task</button>
-                <div>{ this.state.taskList }</div>
+                <button id="userButton" onClick={ () => { this.onCreateButtonClicked() } }>Create ToDo</button>
+                <ul>{ this.state.taskList }</ul>
             </div>;
         }
 
@@ -56,7 +56,7 @@
                 // set new state forcing the component to re-render
                 this.setState(
                     {
-                        taskList:        this.state.taskList + "<br />" + enteredText,
+                        taskList:        this.state.taskList,
                         inputFieldClass: "error"
                     }
                 );
@@ -66,7 +66,7 @@
                 // set new state forcing the component to re-render
                 this.setState(
                     {
-                        taskList:        this.state.taskList + "<br />" + enteredText,
+                        taskList:        this.state.taskList + ", " + enteredText,
                         inputFieldClass: ""
                     }
                 );
