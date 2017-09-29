@@ -28,9 +28,15 @@
         padding:            0 10px 0 10px;
         margin:             15px;
         outline:            none;
-        transition:         background 0.5s ease-in;
         text-align:         center;
         font-size:          15px;
+        background:         #ffffff;
+        transition:         background 0.5s ease-in;
+    }
+
+    input#userInput:focus
+    {
+        background:         #e2e2e2;
     }
 
     input#userInput.error
@@ -45,4 +51,12 @@
         height:             30px;
         outline:            none;
         font-size:          15px;
+        color:              #ffffff;
+        background:         #646464;
+        transition:         background 0.5s ease-in;
+    }
+
+    button#userButton:hover
+    {
+        background:         #8c8c8c;
     }
