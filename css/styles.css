@@ -3,18 +3,19 @@
     {
         margin:             50px;
         text-align:         center;
-        color:              #3d3d3d;
         background:         #747474;
-        font-family:        Century Gothic, Futura, sans-serif;
         overflow-x:         auto;
         overflow-y:         scroll;
-        font-size:          15px;
     }
 
     *
     {
+        font-family:        Century Gothic, Futura, sans-serif;
+        font-size:          15px;
+        color:              #3d3d3d;
         border:             0;
         border-radius:      8px;
+        transition:         all 0.5s ease-in;
     }
 
     h1#appTitle
@@ -31,7 +32,6 @@
         margin:             0 auto 0 auto;
         width:              640px;
         height:             150px;
-        transition:         height 0.5s ease-in;
     }
 
     input#userInput
@@ -45,7 +45,6 @@
         margin:             15px 0 0 0;
         outline:            none;
         text-align:         center;
-        transition:         background 0.5s ease-in;
     }
 
     input#userInput:focus
@@ -65,7 +64,6 @@
         outline:            none;
         color:              #ffffff;
         background:         #8c8c8c;
-        transition:         background 0.5s ease-in;
         padding:            0 10px 0 10px;
         margin:             15px 0 0 0;
         cursor:             pointer;
@@ -79,7 +77,6 @@
     input#submitButton:active
     {
         background:         #3d3d3d;
-        transition:         background 0.0s ease-in;
     }
 
     ul#taskList
