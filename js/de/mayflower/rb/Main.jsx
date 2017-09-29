@@ -2,6 +2,8 @@
     /*******************************************************************************************************************
     *   The main class represents the application's entry point.
     *
+    *   TODO ASAP   Simplify/merge css attributes!
+    *
     *   TODO INIT   Components
     *   TODO INIT   State
     *   TODO INIT   Properties
@@ -54,6 +56,6 @@
         ***************************************************************************************************************/
         static APPLICATION_TITLE()
         {
-            return "React ToDo List, (c) 2017 Mayflower GmbH";
+            return "React ToDo List";
         }
     }

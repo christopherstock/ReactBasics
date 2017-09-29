@@ -14,6 +14,7 @@
 
             this.state = {
                 taskList: "1st entry",
+                inputFieldClass: "",
             }
         }
 
@@ -28,11 +29,9 @@
 
             return <div>
                 <h1>{ this.props.title }</h1>
-                <input id="userInput" type="text" />
-                <button onClick={ () => { this.onCreateButtonClicked() } }>Create new task</button>
-
+                <input id="userInput" className={ this.state.inputFieldClass } type="text" /><br />
+                <button id="userButton" onClick={ () => { this.onCreateButtonClicked() } }>Create new task</button>
                 <div>{ this.state.taskList }</div>
-
             </div>;
         }
 
@@ -43,44 +42,34 @@
         {
             console.log( "The create button has been clicked" );
 
+            // get input field and entered text
             let inputField  = document.getElementById( "userInput" );
             let enteredText = inputField.value.trim();
+
+            // clear input field
+            inputField.value = "";
 
             // check entered text
             console.log( "Trimmed text in the box is [" + enteredText + "]" );
             if ( enteredText.length === 0 )
             {
-                alert( "Please enter a text in the task definition field!" );
-                return;
+                // set new state forcing the component to re-render
+                this.setState(
+                    {
+                        taskList:        this.state.taskList + "<br />" + enteredText,
+                        inputFieldClass: "error"
+                    }
+                );
             }
-
-            //clear the input field
-            inputField.value = "";
-
-            // set new state - force the component to render
-            this.setState(
-                {
-                    taskList: this.state.taskList + "<br />" + enteredText
-                }
-            );
-/*
-            this.state = {
-                taskList: this.state.taskList + "<br />" + enteredText
-            };
-*/
-            this.render();
+            else
+            {
+                // set new state forcing the component to re-render
+                this.setState(
+                    {
+                        taskList:        this.state.taskList + "<br />" + enteredText,
+                        inputFieldClass: ""
+                    }
+                );
+            }
         };
-
-        /***************************************************************************************************************
-        *   Tests state updating forcing this component to re-render.
-        ***************************************************************************************************************/
-        test()
-        {
-            console.log( "ToDoList test() being invoked" );
-
-            this.setState( { testValue: 5 } );
-
-
-        }
-
     }
