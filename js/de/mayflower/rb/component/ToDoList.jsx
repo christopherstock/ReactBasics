@@ -14,9 +14,6 @@
 
             this.state = {
                 taskList: [ "Entry 1", "Entry 2" ],
-
-                // TODO replace ?
-                inputFieldClass: "",
             }
         }
 
@@ -62,35 +59,20 @@
             if ( enteredText.length === 0 )
             {
                 document.getElementById( "userInput" ).className = "error";
-
-                // set new state forcing the component to re-render
-                this.setState(
-                    {
-
-                        // TODO prune?
-
-                        taskList:        this.state.taskList,
-                    }
-                );
+                return;
             }
-            else
-            {
-                console.log( "1 >> " + this.state.taskList.length );
 
-                // copy original array
-                let newTaskList = this.state.taskList.slice();
-                newTaskList.push( enteredText );
+            // copy original array
+            let newTaskList = this.state.taskList.slice();
+            newTaskList.push( enteredText );
 
-                console.log( "2 >> " + newTaskList.length );
+            document.getElementById( "userInput" ).className = "";
 
-                document.getElementById( "userInput" ).className = "";
-
-                // set new state forcing the component to re-render
-                this.setState(
-                    {
-                        taskList:        newTaskList,
-                    }
-                );
-            }
+            // set new state forcing the component to re-render
+            this.setState(
+                {
+                    taskList: newTaskList,
+                }
+            )
         };
     }
