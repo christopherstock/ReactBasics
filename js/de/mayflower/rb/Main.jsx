@@ -4,10 +4,13 @@
     *
     *   TODO ASAP   Simplify/merge/unify css attributes!
     *   TODO ASAP   Group to form and enable onSubmit
+    *   TODO ASAP   Own component for task-item.
+    *   TODO ASAP   Rename "ToDo" to "Task".
     *
-    *   TODO INIT   Components
-    *   TODO INIT   State
-    *   TODO INIT   Properties
+    *   OK 1. JSX
+    *   OK 2. Components
+    *   OK 3. Properties
+    *   OK 4. State
     *
     *   TODO INIT   Data flow
     *   TODO INIT   Rendercycle

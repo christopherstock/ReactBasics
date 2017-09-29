@@ -3,8 +3,8 @@
     {
         margin:             50px;
         text-align:         center;
-        background:         #3d3d3d;
         color:              #3d3d3d;
+        background:         #747474;
         font-family:        Century Gothic, Futura, sans-serif;
         overflow-x:         auto;
         overflow-y:         scroll;
@@ -13,39 +13,40 @@
     h1#title
     {
         font-size:          35px;
-        margin:             15px 0 0 0;
+        margin:             0;
     }
 
     div#mainContainer
     {
+        background:         #ffffff;
         text-align:         center;
         overflow:           hidden;
         margin:             0 auto 0 auto;
         width:              640px;
-        min-height:         667px;
-        background:         #ffffff;
         border-radius:      10px;
+        height:             150px;
+        transition:         height 0.5s ease-in;
     }
 
     input#userInput
     {
+        background:         #e2e2e2;
         color:              #3d3d3d;
-        width:              200px;
+        width:              300px;
         height:             30px;
-        border:             solid 1px #3d3d3d;
+        border:             0;
         border-radius:      10px;
         padding:            0 10px 0 10px;
         margin:             15px 0 0 0;
         outline:            none;
         text-align:         center;
         font-size:          15px;
-        background:         #ffffff;
         transition:         background 0.5s ease-in;
     }
 
     input#userInput:focus
     {
-        background:         #e2e2e2;
+        background:         #cacaca;
     }
 
     input#userInput.error
@@ -53,10 +54,10 @@
         background:         #ff7086;
     }
 
-    button#userButton
+    input#userButton
     {
         border-radius:      10px;
-        border:             solid 1px #3d3d3d;
+        border:             0;
         height:             30px;
         outline:            none;
         font-size:          15px;
@@ -67,12 +68,12 @@
         margin:             15px 0 0 0;
     }
 
-    button#userButton:hover
+    input#userButton:hover
     {
         background:         #646464;
     }
 
-    button#userButton:active
+    input#userButton:active
     {
         background:         #3d3d3d;
         transition:         background 0.0s ease-in;
@@ -89,7 +90,7 @@
 
     ul#todoList li
     {
-        border:             1px solid #646464;
+        border:             0;
         animation:          fadeIn 1.0s ease-in;
         background:         #a5e2bf;
         height:             40px;

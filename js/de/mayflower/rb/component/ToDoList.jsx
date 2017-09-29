@@ -13,7 +13,7 @@
             super( props );
 
             this.state = {
-                taskList: [ "Entry 1", "Entry 2", "Entry 3",  ],
+                taskList: [],
             }
         }
 
@@ -26,17 +26,25 @@
         {
             console.log( "ToDoList.render() being invoked" );
 
-            return <div>
+            return <div id="test">
+
+                { /* title */ }
                 <h1 id="title">{ this.props.title }</h1>
-                <input id="userInput" type="text" /><br />
-                <button id="userButton" onClick={ () => { this.onCreateButtonClicked() } }>Create ToDo</button>
+
+                { /* input field */ }
+                <form onSubmit={ ( event ) => { this.onFormSubmit( event ); } }>
+                    <input id="userInput" type="text" />
+                    <br />
+                    <input id="userButton" type="submit" value="Create Task" />
+                </form>
+
+                { /* task list */ }
                 <ul id="todoList">
                 {
-                    // TODO outsource to function?
-
                     this.createToDoListItems()
                 }
                 </ul>
+
             </div>;
         }
 
@@ -56,11 +64,16 @@
         }
 
         /***************************************************************************************************************
-        *   Tests state updating forcing this component to re-render.
+        *   Being invoked when the form is submitted.
+        *
+        *   @event The form submission event.
         ***************************************************************************************************************/
-        onCreateButtonClicked()
+        onFormSubmit( event )
         {
-            console.log( "The create button has been clicked" );
+            // suppress page reload
+            event.preventDefault();
+
+            console.log( "Create task form submitted" );
 
             // get input field and entered text
             let inputField  = document.getElementById( "userInput" );
@@ -82,6 +95,7 @@
             newTaskList.push( enteredText );
 
             document.getElementById( "userInput" ).className = "";
+            document.getElementById( "mainContainer" ).style.height = ( 150 + ( newTaskList.length * 55 ) ) + "px";
 
             // set new state forcing the component to re-render
             this.setState(
