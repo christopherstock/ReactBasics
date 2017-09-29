@@ -34,7 +34,7 @@
             return <div>
 
                 { /* title */ }
-                <h1 id="title">{ this.props.title }</h1>
+                <h1 id="appTitle">{ this.props.title }</h1>
 
                 { /* task input form */ }
                 <form onSubmit={ ( event ) => { this.onFormSubmit( event ); } }>

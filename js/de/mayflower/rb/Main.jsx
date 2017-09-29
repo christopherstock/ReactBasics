@@ -21,11 +21,10 @@
     *               This is commonly called a "top-down" or "unidirectional" data flow. Any state is always owned by
     *               some specific component, and any data or UI derived from that state can only affect components
     *               "below" them in the tree.
-    *   TODO        Create TaskItem component to illustreate the data flow.
     *
     *   OK 6. Lifecycle callbacks
     *
-    *
+    *   TODO Create component for input form.
     *
     *   TODO INIT   Rendercycle
     *   TODO INIT   Controlled & uncontrolled inputs
