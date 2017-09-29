@@ -14,6 +14,8 @@
 
             this.state = {
                 taskList: [ "Entry 1", "Entry 2" ],
+
+                // TODO replace ?
                 inputFieldClass: "",
             }
         }
@@ -73,12 +75,18 @@
             }
             else
             {
-                // TODO splice!
+                console.log( "1 >> " + this.state.taskList.length );
+
+                // copy original array
+                let newTaskList = this.state.taskList.slice();
+                newTaskList.push( enteredText );
+
+                console.log( "2 >> " + newTaskList.length );
 
                 // set new state forcing the component to re-render
                 this.setState(
                     {
-                        taskList:        this.state.taskList,
+                        taskList:        newTaskList,
                         inputFieldClass: ""
                     }
                 );
