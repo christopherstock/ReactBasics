@@ -2,31 +2,24 @@
     /*******************************************************************************************************************
     *   The main class represents the application's entry point.
     *
-    *   TODO ASAP   Simplify/merge/unify css attributes!
-    *   TODO ASAP   Group to form and enable onSubmit
-    *   TODO ASAP   Own component for task-item.
-    *   TODO ASAP   Rename "ToDo" to "Task".
+    *   TODO ASAP Simplify/merge/unify css attributes!
+    *   TODO ASAP Create component for input form.
     *
     *   OK 1. JSX
     *   OK 2. Components
     *   OK 3. Properties
     *   OK 4. State ( stateless and statefull components )
+    *   OK 5. data flow
+    *         Data flows down. Neither parent nor child components can know if a certain component is stateful
+    *         or stateless, and they shouldn't care whether it is defined as a function or a class.
+    *         This is why state is often called local or encapsulated. It is not accessible to any component
+    *         other than the one that owns and sets it. A component may choose to pass its state down as props to its child components:
+    *         This is commonly called a "top-down" or "unidirectional" data flow. Any state is always owned by
+    *         some specific component, and any data or UI derived from that state can only affect components
+    *         "below" them in the tree.
+    *   OK 6. Component Lifecycle callbacks
     *
-    *   TODO 5. data flow
     *
-    *               Data flows down. Neither parent nor child components can know if a certain component is stateful
-    *               or stateless, and they shouldn't care whether it is defined as a function or a class.
-    *               This is why state is often called local or encapsulated. It is not accessible to any component
-    *               other than the one that owns and sets it. A component may choose to pass its state down as props to its child components:
-    *               This is commonly called a "top-down" or "unidirectional" data flow. Any state is always owned by
-    *               some specific component, and any data or UI derived from that state can only affect components
-    *               "below" them in the tree.
-    *
-    *   OK 6. Lifecycle callbacks
-    *
-    *   TODO Create component for input form.
-    *
-    *   TODO INIT   Rendercycle
     *   TODO INIT   Controlled & uncontrolled inputs
     *
     *   @author  Christopher Stock
@@ -35,7 +28,7 @@
     class Main
     {
         /***************************************************************************************************************
-        *   The main method being invoked on startup.
+        *   This is the application's entry point.
         ***************************************************************************************************************/
         static main()
         {
