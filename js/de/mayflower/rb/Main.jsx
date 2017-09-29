@@ -2,7 +2,7 @@
     /*******************************************************************************************************************
     *   The main class represents the application's entry point.
     *
-    *   TODO ASAP   Simplify/merge css attributes!
+    *   TODO ASAP   Simplify/merge/unify css attributes!
     *   TODO ASAP   Group to form and enable onSubmit
     *
     *   TODO INIT   Components

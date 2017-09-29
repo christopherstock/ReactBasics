@@ -6,6 +6,8 @@
         background:         #3d3d3d;
         color:              #3d3d3d;
         font-family:        Century Gothic, Futura, sans-serif;
+        overflow-x:         auto;
+        overflow-y:         scroll;
     }
 
     h1#title
@@ -19,9 +21,10 @@
         text-align:         center;
         overflow:           hidden;
         margin:             0 auto 0 auto;
-        width:              1000px;
-        height:             667px;
+        width:              640px;
+        min-height:         667px;
         background:         #ffffff;
+        border-radius:      10px;
     }
 
     input#userInput
@@ -88,6 +91,9 @@
     {
         border:             1px solid #646464;
         animation:          fadeIn 1.0s ease-in;
-        background:         #ff0000;
-        margin:             20px;
+        background:         #a5e2bf;
+        height:             40px;
+        line-height:        40px;
+        margin:             15px 15px 0 15px;
+        border-radius:      10px;
     }

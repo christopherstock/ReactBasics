@@ -13,7 +13,7 @@
             super( props );
 
             this.state = {
-                taskList: [ "Entry 1", "Entry 2" ],
+                taskList: [ "Entry 1", "Entry 2", "Entry 3",  ],
             }
         }
 
