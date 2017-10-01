@@ -17,8 +17,8 @@
     *         This is commonly called a "top-down" or "unidirectional" data flow. Any state is always owned by
     *         some specific component, and any data or UI derived from that state can only affect components
     *         "below" them in the tree.
-    *   OK 6. Component Lifecycle callbacks
     *
+    *   OK 6. Component Lifecycle callbacks
     *   OK 7. Controlled components:
     *         In a controlled component, form data is handled by a React component.
     *         A React component that renders a form and also controls what happens in that form on subsequent user input

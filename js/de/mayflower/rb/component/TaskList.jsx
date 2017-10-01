@@ -19,7 +19,6 @@
 
             return <div>
 
-                { /* task list */ }
                 <ul id="taskList">
                 {
                     this.createTaskListItems()

@@ -37,11 +37,9 @@
                 <h1 id="appTitle">{ this.props.title }</h1>
 
                 { /* task input form */ }
-                <form onSubmit={ ( event ) => { this.onFormSubmit( event ); } }>
-                    <input id="userInput" type="text" />
-                    <br />
-                    <input id="submitButton" type="submit" value="Create Task" />
-                </form>
+                <TaskInput
+                    onCreateNewTask={ ( newTask ) => this.createNewTask( newTask ) }
+                />
 
                 { /* task list */ }
                 <TaskList
@@ -52,35 +50,17 @@
         }
 
         /***************************************************************************************************************
-        *   Being invoked when the form is submitted.
+        *   Creates a new task in the TaskList.
         *
-        *   @event The form submission event.
+        *   @param taskName The name of the task to create.
         ***************************************************************************************************************/
-        onFormSubmit( event )
+        createNewTask( taskName )
         {
-            // suppress page reload
-            event.preventDefault();
-
-            console.log( "Create task form submitted" );
-
-            // get input field and entered text
-            let inputField  = document.getElementById( "userInput" );
-            let enteredText = inputField.value.trim();
-
-            // clear input field
-            inputField.value = "";
-
-            // check entered text
-            console.log( "Trimmed text in the box is [" + enteredText + "]" );
-            if ( enteredText.length === 0 )
-            {
-                document.getElementById( "userInput" ).className = "error";
-                return;
-            }
+            console.log( "App.createNewTask( " + taskName + " ) being invoked" );
 
             // copy original array
             let newTaskList = this.state.taskList.slice();
-            newTaskList.push( enteredText );
+            newTaskList.push( taskName );
 
             document.getElementById( "userInput" ).className = "";
             document.getElementById( "mainContainer" ).style.height = ( 150 + ( newTaskList.length * 55 ) ) + "px";
@@ -91,7 +71,7 @@
                     taskList: newTaskList,
                 }
             )
-        };
+        }
 
         /***************************************************************************************************************
         *   Being invoked before this component has been mounted.
