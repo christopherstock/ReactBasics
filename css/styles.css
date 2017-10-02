@@ -1,11 +1,11 @@
 
     body
     {
-        margin:             50px;
         background:         #c0c0c0;
         font-family:        sans-serif;
         font-size:          15px;
         color:              #3d3d3d;
+        margin:             50px;
     }
 
     *
@@ -22,7 +22,6 @@
     {
         background:         #ffffff;
         text-align:         center;
-        overflow:           hidden;
         margin:             0 auto 0 auto;
         padding:            15px;
         width:              640px;
@@ -31,40 +30,18 @@
 
     input#userInput
     {
-        background:         #e2e2e2;
         width:              400px;
         height:             40px;
         margin:             15px 0 0 0;
         text-align:         center;
     }
 
-    input#userInput:focus
-    {
-        background:         #cacaca;
-    }
-
-    input#userInput.error
-    {
-        background:         #ff7086;
-    }
-
     input#submitButton
     {
         height:             40px;
         color:              #ffffff;
-        background:         #8c8c8c;
         padding:            0 10px 0 10px;
         margin:             15px 0 0 0;
-    }
-
-    input#submitButton:hover
-    {
-        background:         #646464;
-    }
-
-    input#submitButton:active
-    {
-        background:         #3d3d3d;
     }
 
     ul#taskList
@@ -78,7 +55,6 @@
     ul#taskList li
     {
         animation:          fadeIn 1.0s ease-in;
-        background:         #a5e2bf;
         height:             40px;
         line-height:        40px;
         margin:             15px 0 0 0;
@@ -91,6 +67,26 @@
         margin:             5px 5px 0 5px;
         padding:            0 10px 0 10px;
         color:              #ffffff;
+    }
+
+    ul#taskList li
+    {
+        animation:          fadeIn 1.0s ease-in;
+        background:         #a5e2bf;
+    }
+
+    input#userInput
+    {
+        background:         #e2e2e2;
+    }
+
+    input#submitButton
+    {
+        background:         #8c8c8c;
+    }
+
+    ul#taskList li button
+    {
         background:         #8c8c8c;
     }
 
@@ -107,4 +103,24 @@
     ul#taskList li button.disabled
     {
         background:         #c0c0c0;
+    }
+
+    input#userInput:focus
+    {
+        background:         #cacaca;
+    }
+
+    input#userInput.error
+    {
+        background:         #ff7086;
+    }
+
+    input#submitButton:hover
+    {
+        background:         #646464;
+    }
+
+    input#submitButton:active
+    {
+        background:         #3d3d3d;
     }
