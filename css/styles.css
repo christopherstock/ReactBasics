@@ -2,20 +2,25 @@
     body
     {
         background:         #c0c0c0;
-        font-family:        sans-serif;
-        font-size:          15px;
         color:              #3d3d3d;
         margin:             50px;
     }
 
     *
     {
+        font-size:          15px;
+        font-family:        sans-serif;
         margin:             0;
         padding:            0;
         border:             0;
         border-radius:      5px;
-        transition:         all 0.4s ease-in;
+        transition:         all 0.3s ease-in;
         outline:            none;
+    }
+
+    h1
+    {
+        font-size:          35px;
     }
 
     div#mainContainer
@@ -90,10 +95,11 @@
 
     .button:disabled
     {
-        background:         #c0c0c0;
+        background:         #c5c5c5;
     }
 
-    .error
+    .error,
+    .error:focus
     {
         background:         #ff7086;
     }
