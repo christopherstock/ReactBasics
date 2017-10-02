@@ -107,7 +107,24 @@
         {
             console.log( "App.moveTaskUp( " + taskIndex + " ) being invoked" );
 
+            if ( taskIndex > 0 )
+            {
+                // copy original array
+                let newTaskList = this.state.taskList.slice();
 
+                let taskToMoveUp   = newTaskList[ taskIndex     ];
+                let taskToMoveDown = newTaskList[ taskIndex - 1 ];
+
+                newTaskList[ taskIndex - 1 ] = taskToMoveUp;
+                newTaskList[ taskIndex     ] = taskToMoveDown;
+
+                // set new state forcing the component to re-render
+                this.setState(
+                    {
+                        taskList: newTaskList,
+                    }
+                )
+            }
         }
 
         /***************************************************************************************************************
@@ -119,7 +136,24 @@
         {
             console.log( "App.moveTaskDown( " + taskIndex + " ) being invoked" );
 
+            if ( taskIndex < this.state.taskList.length - 1 )
+            {
+                // copy original array
+                let newTaskList = this.state.taskList.slice();
 
+                let taskToMoveDown = newTaskList[ taskIndex     ];
+                let taskToMoveUp   = newTaskList[ taskIndex + 1 ];
+
+                newTaskList[ taskIndex + 1  ] = taskToMoveDown;
+                newTaskList[ taskIndex      ] = taskToMoveUp;
+
+                // set new state forcing the component to re-render
+                this.setState(
+                    {
+                        taskList: newTaskList,
+                    }
+                )
+            }
         }
 
         /***************************************************************************************************************
