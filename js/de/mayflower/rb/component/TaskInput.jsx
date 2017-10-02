@@ -1,13 +1,27 @@
 
     /*******************************************************************************************************************
     *   Represents the Input component that creates new tasks.
-    *   This is an example for a stateful component ( TODO state for input class! ).
+    *   This is an example for a stateful component.
     *
     *   @author  Christopher Stock
     *   @version 1.0
     *******************************************************************************************************************/
     class TaskInput extends React.Component
     {
+        /***************************************************************************************************************
+        *   Initializes this component by setting the initial state.
+        *
+        *   @param props The initial properties being passed in the component tag.
+        ***************************************************************************************************************/
+        constructor( props )
+        {
+            super( props );
+
+            this.state = {
+                inputFieldClass: "",
+            }
+        }
+
         /***************************************************************************************************************
         *   Being invoked every time this component renders.
         *
@@ -20,7 +34,7 @@
             return <div>
 
                 <form onSubmit={ ( event ) => { this.onFormSubmit( event ); } }>
-                    <input id="userInput" type="text" maxLength="50" />
+                    <input id="userInput" type="text" maxLength="50" className={ this.state.inputFieldClass } />
                     <br />
                     <input id="submitButton" type="submit" value="Create Task" />
                 </form>
@@ -53,16 +67,24 @@
             {
                 console.log( "Empty text input detected." );
 
-                // set userInput class to 'error' .. TODO to props!
-                document.getElementById( "userInput" ).className = "error";
-
-                return;
+                // set userInput class to 'error'
+                this.setState(
+                    {
+                        inputFieldClass: "error",
+                    }
+                );
             }
+            else
+            {
+                // reset userInput class
+                this.setState(
+                    {
+                        inputFieldClass: "",
+                    }
+                );
 
-            // reset userInput class TODO to props!
-            document.getElementById( "userInput" ).className = "";
-
-            // invoke parent listener
-            this.props.onTaskCreate( enteredText );
+                // invoke parent listener
+                this.props.onTaskCreate( enteredText );
+            }
         };
     }

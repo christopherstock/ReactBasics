@@ -42,12 +42,14 @@
                         <div>
                             { item }
 
+                            { /* Button 'Delete' */ }
                             <button
                                 onClick={ () => { this.props.onTaskDelete(   index ); } }
                             >
                                 &#10006;
                             </button>
 
+                            { /* Button 'Move Down' */ }
                             <button
                                 onClick={ () => { this.props.onTaskMoveDown( index ); } }
                                 className={ ( index === this.props.taskList.length - 1 ? "hidden" : "" ) }
@@ -55,6 +57,7 @@
                                 &#9660;
                             </button>
 
+                            { /* Button 'Move Up' */ }
                             <button
                                 onClick={ () => { this.props.onTaskMoveUp(   index ); } }
                                 className={ ( index === 0 ? "hidden" : "" ) }

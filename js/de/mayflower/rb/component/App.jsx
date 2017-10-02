@@ -9,7 +9,7 @@
     class App extends React.Component
     {
         /***************************************************************************************************************
-        *   Creates a new App component..
+        *   Initializes this component by setting the initial state.
         *
         *   @param props The initial properties being passed in the component tag.
         ***************************************************************************************************************/

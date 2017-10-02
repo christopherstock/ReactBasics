@@ -6,7 +6,6 @@
     *   TODO ASAP Buttons for rearranging or deleting a task?
     *   TODO ASAP Simplify/merge/unify css attributes!
     *   TODO ASAP move to lower div! ( make two separate divs with rounded rects etc. )
-    *   TODO ASAP userInput class to property!
     *
     *   @author  Christopher Stock
     *   @version 1.0
