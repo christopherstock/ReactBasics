@@ -2,6 +2,8 @@
     /*******************************************************************************************************************
     *   The main class represents the application's entry point.
     *
+    *   TODO ASAP Unify height of all elements.
+    *
     *   TODO ASAP Buttons for rearranging or deleting a task?
     *   TODO ASAP Simplify/merge/unify css attributes!
     *

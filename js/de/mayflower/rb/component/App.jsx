@@ -42,12 +42,15 @@
 
                 { /* task input form */ }
                 <TaskInput
-                    onCreateNewTask={ ( newTask ) => this.createNewTask( newTask ) }
+                    onTaskCreate={ ( newTask ) => this.createTask( newTask ) }
                 />
 
                 { /* task list */ }
                 <TaskList
                     taskList={ this.state.taskList }
+                    onTaskDelete={   ( taskIndex ) => this.deleteTask(   taskIndex ) }
+                    onTaskMoveUp={   ( taskIndex ) => this.moveTaskUp(   taskIndex ) }
+                    onTaskMoveDown={ ( taskIndex ) => this.moveTaskDown( taskIndex ) }
                 />
 
             </div>;
@@ -58,9 +61,9 @@
         *
         *   @param taskName The name of the task to create.
         ***************************************************************************************************************/
-        createNewTask( taskName )
+        createTask(taskName )
         {
-            console.log( "App.createNewTask( " + taskName + " ) being invoked" );
+            console.log( "App.createTask( " + taskName + " ) being invoked" );
 
             // copy original array
             let newTaskList = this.state.taskList.slice();
@@ -74,6 +77,42 @@
                     taskList: newTaskList,
                 }
             )
+        }
+
+        /***************************************************************************************************************
+        *   Deletes the task with the specified index.
+        *
+        *   @param taskIndex The index of the task to delete.
+        ***************************************************************************************************************/
+        deleteTask( taskIndex )
+        {
+            console.log( "App.deleteTask( " + taskIndex + " ) being invoked" );
+
+
+        }
+
+        /***************************************************************************************************************
+        *   Rearrranges the task with the specified index up.
+        *
+        *   @param taskIndex The index of the task to move up.
+        ***************************************************************************************************************/
+        moveTaskUp( taskIndex )
+        {
+            console.log( "App.moveTaskUp( " + taskIndex + " ) being invoked" );
+
+
+        }
+
+        /***************************************************************************************************************
+        *   Rearrranges the task with the specified index down.
+        *
+        *   @param taskIndex The index of the task to move down.
+        ***************************************************************************************************************/
+        moveTaskDown( taskIndex )
+        {
+            console.log( "App.moveTaskDown( " + taskIndex + " ) being invoked" );
+
+
         }
 
         /***************************************************************************************************************

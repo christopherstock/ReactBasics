@@ -36,20 +36,21 @@
         ***************************************************************************************************************/
         createTaskListItems()
         {
-            let itemIndex = 0;
-
             return this.props.taskList.map(
-                function( item )
+                function( item, index )
                 {
-                    return <li key={ itemIndex++ }>
+                    console.log( ">> " + index );
+
+                    return <li key={ index }>
                         <div>
                             { item }
-                            <button>DEL</button>
-                            <button>UP</button>
-                            <button>DOWN</button>
+                            <button onClick={ () => { this.props.onTaskDelete(   index ); } }>DEL { index }</button>
+                            <button onClick={ () => { this.props.onTaskMoveUp(   index ); } }>UP</button>
+                            <button onClick={ () => { this.props.onTaskMoveDown( index ); } }>DOWN</button>
                         </div>
                     </li>;
-                }
+                },
+                this
             );
         }
     }

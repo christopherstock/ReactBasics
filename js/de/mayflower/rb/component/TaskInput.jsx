@@ -58,6 +58,6 @@
             }
 
             // invoke parent listener
-            this.props.onCreateNewTask( enteredText );
+            this.props.onTaskCreate( enteredText );
         };
     }
