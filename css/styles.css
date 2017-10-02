@@ -106,7 +106,20 @@
     ul#taskList li button
     {
         float:              right;
-        line-height:        40px;
-        margin:             0 5px 0 5px;
+        line-height:        30px;
+        margin:             5px 5px 0 5px;
         padding:            0 10px 0 10px;
+        color:              #ffffff;
+        background:         #8c8c8c;
     }
+
+    ul#taskList li button:hover
+    {
+        background:         #646464;
+    }
+
+    ul#taskList li button:active
+    {
+        background:         #3d3d3d;
+    }
+
