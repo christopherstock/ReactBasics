@@ -18,7 +18,7 @@
             super( props );
 
             this.state = {
-                inputFieldClass: "",
+                error: false,
             }
         }
 
@@ -34,9 +34,9 @@
             return <div>
 
                 <form onSubmit={ ( event ) => { this.onFormSubmit( event ); } }>
-                    <input id="userInput" type="text" maxLength="50" className={ this.state.inputFieldClass } />
+                    <input id="userInput" type="text" maxLength="50" className={ ( this.state.error ? "error" : "" ) } />
                     <br />
-                    <input id="submitButton" type="submit" value="Create Task" />
+                    <input id="submitButton" type="submit" value="Create Task" className="button" />
                 </form>
 
             </div>;
@@ -70,7 +70,7 @@
                 // set userInput class to 'error'
                 this.setState(
                     {
-                        inputFieldClass: "error",
+                        error: true,
                     }
                 );
             }
@@ -79,7 +79,7 @@
                 // reset userInput class
                 this.setState(
                     {
-                        inputFieldClass: "",
+                        error: false,
                     }
                 );
 
