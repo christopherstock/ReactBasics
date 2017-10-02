@@ -88,12 +88,12 @@
         background:         #a8a8a8;
     }
 
+    .button:disabled
+    {
+        background:         #c0c0c0;
+    }
+
     .error
     {
         background:         #ff7086;
-    }
-
-    .disabled
-    {
-        background:         #c0c0c0;
     }

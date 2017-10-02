@@ -53,7 +53,8 @@
                             { /* Button 'Move Down' */ }
                             <button
                                 onClick={ () => { this.props.onTaskMoveDown( index ); } }
-                                className={ ( index === this.props.taskList.length - 1 ? "button disabled" : "button" ) }
+                                disabled={ index === this.props.taskList.length - 1 }
+                                className="button"
                             >
                                 &#9660;
                             </button>
@@ -61,7 +62,8 @@
                             { /* Button 'Move Up' */ }
                             <button
                                 onClick={ () => { this.props.onTaskMoveUp(   index ); } }
-                                className={ ( index === 0 ? "button disabled" : "button" ) }
+                                disabled={ index === 0 }
+                                className="button"
                             >
                                 &#9650;
                             </button>
