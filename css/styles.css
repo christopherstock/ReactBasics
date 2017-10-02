@@ -122,3 +122,7 @@
         background:         #3d3d3d;
     }
 
+    ul#taskList li button.hidden
+    {
+        visibility:         hidden;
+    }
