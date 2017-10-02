@@ -17,7 +17,7 @@
         {
             console.log( "TaskList.render() being invoked" );
 
-            document.getElementById( "mainContainer" ).style.height = ( 170 + ( this.props.taskList.length * 55 ) ) + "px";
+            document.getElementById( "mainContainer" ).style.height = ( 150 + ( this.props.taskList.length * 55 ) ) + "px";
 
             return <div>
 

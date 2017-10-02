@@ -18,7 +18,12 @@
             super( props );
 
             this.state = {
-                taskList: [],
+                taskList: [
+                    "Example Task 1",
+                    "Example Task 2",
+                    "Example Task 3",
+                    "Example Task 4",
+                ],
             }
         }
 
