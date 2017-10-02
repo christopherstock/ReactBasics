@@ -1,19 +1,25 @@
 
     /*******************************************************************************************************************
-    *   The main class represents the application's entry point.
+    *   The main class that contains the application's entry point.
     *
+    *   TODO ASAP Remove Main.jsx and move its content to index.jsx ( or turn Main.jsx non-static ).
     *   TODO ASAP Complete workshop app.
-    *   TODO ASAP Test in various browsers.
-    *   TODO ASAP Unify height of all elements.
-    *   TODO ASAP Buttons for rearranging or deleting a task?
-    *   TODO ASAP Simplify/merge/unify css attributes!
-    *   TODO ASAP move to lower div! ( make two separate divs with rounded rects etc. )
     *
     *   @author  Christopher Stock
     *   @version 1.0
     *******************************************************************************************************************/
     class Main
     {
+        /***************************************************************************************************************
+        *   Creates a new main class.
+        ***************************************************************************************************************/
+        constructor()
+        {
+            // TODO to index.jsx ?
+
+            this.APPLICATION_TITLE = "React Task List";
+        }
+
         /***************************************************************************************************************
         *   This is the application's entry point.
         ***************************************************************************************************************/
