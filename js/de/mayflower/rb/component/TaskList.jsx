@@ -17,8 +17,7 @@
         {
             console.log( "TaskList.render() being invoked" );
 
-            // TODO move to lower div! ( make two separate divs with rounded rects etc. )
-            document.getElementById( "mainContainer" ).style.height = ( 150 + ( this.props.taskList.length * 55 ) ) + "px";
+            document.getElementById( "mainContainer" ).style.height = ( 170 + ( this.props.taskList.length * 55 ) ) + "px";
 
             return <div>
 
@@ -39,14 +38,12 @@
             return this.props.taskList.map(
                 function( item, index )
                 {
-                    console.log( ">> " + index );
-
                     return <li key={ index }>
                         <div>
                             { item }
-                            <button onClick={ () => { this.props.onTaskDelete(   index ); } }>DEL { index }</button>
-                            <button onClick={ () => { this.props.onTaskMoveUp(   index ); } }>UP</button>
-                            <button onClick={ () => { this.props.onTaskMoveDown( index ); } }>DOWN</button>
+                            <button onClick={ () => { this.props.onTaskDelete(   index ); } }>&#10006;</button>
+                            <button onClick={ () => { this.props.onTaskMoveDown( index ); } }>&#9660;</button>
+                            <button onClick={ () => { this.props.onTaskMoveUp(   index ); } }>&#9650;</button>
                         </div>
                     </li>;
                 },
