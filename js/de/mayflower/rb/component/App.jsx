@@ -69,8 +69,6 @@
             let newTaskList = this.state.taskList.slice();
             newTaskList.push( taskName );
 
-            document.getElementById( "userInput" ).className = "";
-
             // set new state forcing the component to re-render
             this.setState(
                 {
@@ -88,7 +86,16 @@
         {
             console.log( "App.deleteTask( " + taskIndex + " ) being invoked" );
 
+            // copy original array
+            let newTaskList = this.state.taskList.slice();
+            newTaskList.splice( taskIndex, 1 );
 
+            // set new state forcing the component to re-render
+            this.setState(
+                {
+                    taskList: newTaskList,
+                }
+            )
         }
 
         /***************************************************************************************************************

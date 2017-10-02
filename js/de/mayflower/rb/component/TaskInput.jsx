@@ -1,7 +1,7 @@
 
     /*******************************************************************************************************************
     *   Represents the Input component that creates new tasks.
-    *   This is an example for a stateless component.
+    *   This is an example for a stateful component ( TODO state for input class! ).
     *
     *   @author  Christopher Stock
     *   @version 1.0
@@ -53,9 +53,14 @@
             {
                 console.log( "Empty text input detected." );
 
+                // set userInput class to 'error' .. TODO to props!
                 document.getElementById( "userInput" ).className = "error";
+
                 return;
             }
+
+            // reset userInput class TODO to props!
+            document.getElementById( "userInput" ).className = "";
 
             // invoke parent listener
             this.props.onTaskCreate( enteredText );
