@@ -33,7 +33,7 @@
         margin:             0 auto 0 auto;
         padding:            0 15px 0 15px;
         width:              640px;
-        height:             150px;
+        height:             170px;
     }
 
     input#userInput
@@ -112,17 +112,17 @@
         background:         #8c8c8c;
     }
 
-    ul#taskList li button:hover
+    ul#taskList li button.enabled:hover
     {
         background:         #646464;
     }
 
-    ul#taskList li button:active
+    ul#taskList li button.enabled:active
     {
         background:         #3d3d3d;
     }
 
-    ul#taskList li button.hidden
+    ul#taskList li button.disabled
     {
-        visibility:         hidden;
+        background:         #c0c0c0;
     }

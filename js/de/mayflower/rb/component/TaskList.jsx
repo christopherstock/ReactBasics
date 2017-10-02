@@ -45,6 +45,7 @@
                             { /* Button 'Delete' */ }
                             <button
                                 onClick={ () => { this.props.onTaskDelete(   index ); } }
+                                className="enabled"
                             >
                                 &#10006;
                             </button>
@@ -52,7 +53,7 @@
                             { /* Button 'Move Down' */ }
                             <button
                                 onClick={ () => { this.props.onTaskMoveDown( index ); } }
-                                className={ ( index === this.props.taskList.length - 1 ? "hidden" : "" ) }
+                                className={ ( index === this.props.taskList.length - 1 ? "disabled" : "enabled" ) }
                             >
                                 &#9660;
                             </button>
@@ -60,7 +61,7 @@
                             { /* Button 'Move Up' */ }
                             <button
                                 onClick={ () => { this.props.onTaskMoveUp(   index ); } }
-                                className={ ( index === 0 ? "hidden" : "" ) }
+                                className={ ( index === 0 ? "disabled" : "enabled" ) }
                             >
                                 &#9650;
                             </button>
