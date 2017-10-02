@@ -16,6 +16,7 @@
         border:             0;
         border-radius:      8px;
         transition:         all 0.5s ease-in;
+        outline:            none;
     }
 
     h1#appTitle
@@ -30,6 +31,7 @@
         text-align:         center;
         overflow:           hidden;
         margin:             0 auto 0 auto;
+        padding:            0 15px 0 15px;
         width:              640px;
         height:             150px;
     }
@@ -38,11 +40,11 @@
     {
         background:         #e2e2e2;
         color:              #3d3d3d;
-        width:              300px;
+        width:              400px;
         height:             30px;
         border:             0;
-        padding:            0 10px 0 10px;
         margin:             15px 0 0 0;
+        padding:            0;
         outline:            none;
         text-align:         center;
     }
@@ -61,7 +63,6 @@
     {
         border:             0;
         height:             30px;
-        outline:            none;
         color:              #ffffff;
         background:         #8c8c8c;
         padding:            0 10px 0 10px;
@@ -95,5 +96,17 @@
         background:         #a5e2bf;
         height:             40px;
         line-height:        40px;
-        margin:             15px 15px 0 15px;
+        margin:             15px 0 0 0;
+    }
+
+    ul#taskList li div > div
+    {
+    }
+
+    ul#taskList li button
+    {
+        float:              right;
+        line-height:        40px;
+        margin:             0 5px 0 5px;
+        padding:            0 10px 0 10px;
     }

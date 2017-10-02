@@ -17,6 +17,9 @@
         {
             console.log( "TaskList.render() being invoked" );
 
+            // TODO move to lower div! ( make two separate divs with rounded rects etc. )
+            document.getElementById( "mainContainer" ).style.height = ( 150 + ( this.props.taskList.length * 55 ) ) + "px";
+
             return <div>
 
                 <ul id="taskList">
@@ -33,12 +36,19 @@
         ***************************************************************************************************************/
         createTaskListItems()
         {
-            let itemKey = 0;
+            let itemIndex = 0;
 
             return this.props.taskList.map(
                 function( item )
                 {
-                    return <li key={ itemKey++ }>{ item }</li>;
+                    return <li key={ itemIndex++ }>
+                        <div>
+                            { item }
+                            <button>DEL</button>
+                            <button>UP</button>
+                            <button>DOWN</button>
+                        </div>
+                    </li>;
                 }
             );
         }

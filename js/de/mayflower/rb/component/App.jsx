@@ -18,7 +18,11 @@
             super( props );
 
             this.state = {
-                taskList: [],
+                taskList: [
+                    "TestTask1",
+                    "TestTask2",
+                    "TestTask3",
+                ],
             }
         }
 
@@ -63,7 +67,6 @@
             newTaskList.push( taskName );
 
             document.getElementById( "userInput" ).className = "";
-            document.getElementById( "mainContainer" ).style.height = ( 150 + ( newTaskList.length * 55 ) ) + "px";
 
             // set new state forcing the component to re-render
             this.setState(

@@ -20,7 +20,7 @@
             return <div>
 
                 <form onSubmit={ ( event ) => { this.onFormSubmit( event ); } }>
-                    <input id="userInput" type="text" />
+                    <input id="userInput" type="text" maxLength="50" />
                     <br />
                     <input id="submitButton" type="submit" value="Create Task" />
                 </form>
