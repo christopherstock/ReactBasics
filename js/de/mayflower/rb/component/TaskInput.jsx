@@ -34,7 +34,7 @@
             return <div>
 
                 <form onSubmit={ ( event ) => { this.onFormSubmit( event ); } }>
-                    <input id="userInput" type="text" maxLength="50" className={ ( this.state.error ? "error" : "" ) } />
+                    <input id="userInput" type="text" maxLength="50" className={ ( this.state.error ? "input error" : "input" ) } />
                     <br />
                     <input id="submitButton" type="submit" value="Create Task" className="button" />
                 </form>

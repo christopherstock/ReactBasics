@@ -1,83 +1,99 @@
-body {
-    background:         #c0c0c0;
-    font-family:        sans-serif;
-    font-size:          15px;
-    color:              #3d3d3d;
-    margin:             50px;
-}
 
-* {
-    margin:             0;
-    padding:            0;
-    border:             0;
-    border-radius:      5px;
-    transition:         all 0.4s ease-in;
-    outline:            none;
-}
+    body
+    {
+        background:         #c0c0c0;
+        font-family:        sans-serif;
+        font-size:          15px;
+        color:              #3d3d3d;
+        margin:             50px;
+    }
 
-div#mainContainer {
-    background:         #ffffff;
-    text-align:         center;
-    margin:             0 auto 0 auto;
-    padding:            15px;
-    width:              640px;
-    height:             150px;
-}
+    *
+    {
+        margin:             0;
+        padding:            0;
+        border:             0;
+        border-radius:      5px;
+        transition:         all 0.4s ease-in;
+        outline:            none;
+    }
 
-input#userInput {
-    background:         #e2e2e2;
-    width:              400px;
-    height:             40px;
-    margin:             15px 0 0 0;
-    text-align:         center;
-}
+    div#mainContainer
+    {
+        background:         #ffffff;
+        text-align:         center;
+        margin:             0 auto 0 auto;
+        padding:            15px;
+        width:              640px;
+        height:             150px;
+    }
 
-input#submitButton {
-    height:             40px;
-    color:              #ffffff;
-    padding:            0 10px 0 10px;
-    margin:             15px 0 0 0;
-}
+    input#userInput
+    {
+        width:              400px;
+        height:             40px;
+        margin-top:         15px;
+        text-align:         center;
+    }
 
-ul#taskList {
-    list-style-type:    none;
-    margin:             0;
-}
+    input#submitButton
+    {
+        height:             40px;
+        padding:            0 10px 0 10px;
+        margin-top:         15px;
+    }
 
-@keyframes fadeIn { from { opacity: 0.0; } to { opacity: 1.0; } }
+    ul#taskList
+    {
+        list-style-type:    none;
+    }
 
-ul#taskList li {
-    background:         #a5e2bf;
-    animation:          fadeIn 1.0s ease-in;
-    height:             40px;
-    line-height:        40px;
-    margin:             15px 0 0 0;
-}
+    @keyframes fadeIn { from { opacity: 0.0; } to { opacity: 1.0; } }
 
-ul#taskList li button {
-    float:              right;
-    line-height:        30px;
-    margin:             5px 5px 0 5px;
-    padding:            0 10px 0 10px;
-    color:              #ffffff;
-}
+    ul#taskList li
+    {
+        background:         #a5e2bf;
+        animation:          fadeIn 1.0s ease-in;
+        height:             40px;
+        line-height:        40px;
+        margin-top:         15px;
+    }
 
-input#userInput:focus {
-    background:         #cacaca;
-}
+    ul#taskList li button
+    {
+        float:              right;
+        line-height:        30px;
+        margin:             5px;
+        padding:            0 10px 0 10px;
+    }
 
-input#userInput.error {
-    background:         #ff7086;
-}
+    .input
+    {
+        background:         #e2e2e2;
+    }
 
-.button {
-    background:         #8c8c8c;
-}
+    .input:focus
+    {
+        background:         #cacaca;
+    }
 
-.button:hover {
-    background:         #a8a8a8;
-}
+    .button
+    {
+        background:         #8c8c8c;
+        color:              #ffffff;
+    }
 
-.button.disabled {
-    background:         #c0c0c0;
-}
+    .button:hover
+    {
+        background:         #a8a8a8;
+    }
+
+    .error
+    {
+        background:         #ff7086;
+    }
+
+    .disabled
+    {
+        background:         #c0c0c0;
+    }
