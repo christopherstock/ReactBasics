@@ -1,6 +1,6 @@
 
     /*******************************************************************************************************************
-    *   Represents the entire application component.
+    *   The entire application component.
     *   This is an example for a stateful component.
     *
     *   @author  Christopher Stock
@@ -11,7 +11,7 @@
         /***************************************************************************************************************
         *   Initializes this component by setting the initial state.
         *
-        *   @param props The initial properties being passed in the component tag.
+        *   @param {Object} props The initial properties being passed in the component tag.
         ***************************************************************************************************************/
         constructor( props )
         {
@@ -19,10 +19,12 @@
 
             this.state = {
                 taskList: [
+/*
                     "Example Task 1",
                     "Example Task 2",
                     "Example Task 3",
                     "Example Task 4",
+*/
                 ],
             }
         }
@@ -30,7 +32,7 @@
         /***************************************************************************************************************
         *   Being invoked every time this component renders.
         *
-        *   @return The rendered JSX.
+        *   @return {JSXTransformer} The rendered JSX.
         ***************************************************************************************************************/
         render()
         {
@@ -58,11 +60,11 @@
         }
 
         /***************************************************************************************************************
-        *   Creates a new task in the TaskList.
+        *   Creates a new task in the TaskList component.
         *
-        *   @param taskName The name of the task to create.
+        *   @param {string} taskName The name of the task to create.
         ***************************************************************************************************************/
-        createTask(taskName )
+        createTask( taskName )
         {
             console.log( "App.createTask( " + taskName + " ) being invoked" );
 
@@ -81,7 +83,7 @@
         /***************************************************************************************************************
         *   Deletes the task with the specified index.
         *
-        *   @param taskIndex The index of the task to delete.
+        *   @param {number} taskIndex The index of the task to delete.
         ***************************************************************************************************************/
         deleteTask( taskIndex )
         {
@@ -100,9 +102,9 @@
         }
 
         /***************************************************************************************************************
-        *   Rearrranges the task with the specified index up.
+        *   Moves the task with the specified index up.
         *
-        *   @param taskIndex The index of the task to move up.
+        *   @param {number} taskIndex The index of the task to move up.
         ***************************************************************************************************************/
         moveTaskUp( taskIndex )
         {
@@ -129,9 +131,9 @@
         }
 
         /***************************************************************************************************************
-        *   Rearrranges the task with the specified index down.
+        *   Moves the task with the specified index down.
         *
-        *   @param taskIndex The index of the task to move down.
+        *   @param {number} taskIndex The index of the task to move down.
         ***************************************************************************************************************/
         moveTaskDown( taskIndex )
         {
@@ -176,9 +178,9 @@
         /***************************************************************************************************************
         *   Being invoked before this component has been unmounted.
         *
-        *   @param nextProps   The props to set on updating.
-        *   @param nextState   The state to set on updating.
-        *   @param nextContext The context to set on updating.
+        *   @param {Object} nextProps   The props to set on updating.
+        *   @param {Object} nextState   The state to set on updating.
+        *   @param {Object} nextContext The context to set on updating.
         ***************************************************************************************************************/
         componentWillUpdate( nextProps, nextState, nextContext )
         {
@@ -188,8 +190,8 @@
         /***************************************************************************************************************
         *   Being invoked before this component receives props.
         *
-        *   @param nextProps   The props to set on updating.
-        *   @param nextContext The context to set on updating.
+        *   @param {Object} nextProps   The props to set on updating.
+        *   @param {Object} nextContext The context to set on updating.
         ***************************************************************************************************************/
         componentWillReceiveProps( nextProps, nextContext )
         {
@@ -215,11 +217,11 @@
         /***************************************************************************************************************
         *   Being invoked before this component has been unmounted.
         *
-        *   @param nextProps   The props to set on updating.
-        *   @param nextState   The state to set on updating.
-        *   @param nextContext The context to set on updating.
+        *   @param {Object} nextProps   The props to set on updating.
+        *   @param {Object} nextState   The state to set on updating.
+        *   @param {Object} nextContext The context to set on updating.
         *
-        *   @return boolean
+        *   @return {boolean} Specifies if this component should update referring to this method.
         ***************************************************************************************************************/
         shouldComponentUpdate( nextProps, nextState, nextContext )
         {

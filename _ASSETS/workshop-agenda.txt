@@ -1,14 +1,19 @@
 
     OK 0. index.html and index.js, external resources
-    Start index.html in webserver ..
+          - Start index.html in webserver ..
 
     OK 1. JSX
 
     OK 2. Components
+          - App component
 
     OK 3. Properties
+          - App title
 
     OK 4. State ( stateless and stateful components )
+          - App is stateful
+          - TaskList is stateless
+          - State is always managed by the component itself. Never from outside.
 
     OK 5. data flow:
           Data flows down. Neither parent nor child components can know if a certain component is stateful
@@ -19,6 +24,8 @@
           This is commonly called a "top-down" or "unidirectional" data flow. Any state is always owned by
           some specific component, and any data or UI derived from that state can only affect components
           "below" them in the tree.
+
+          - TaskInput class
 
     OK 6. Component Lifecycle callbacks
 

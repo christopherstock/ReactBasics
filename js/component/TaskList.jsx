@@ -11,27 +11,26 @@
         /***************************************************************************************************************
         *   Being invoked every time this component renders.
         *
-        *   @return The rendered JSX.
+        *   @return {JSXTransformer} The rendered JSX.
         ***************************************************************************************************************/
         render()
         {
             console.log( "TaskList.render() being invoked" );
 
+            // animate main container height later
             document.getElementById( "mainContainer" ).style.height = ( 150 + ( this.props.taskList.length * 55 ) ) + "px";
 
-            return <div>
-
-                <ul id="taskList">
-                {
-                    this.createTaskListItems()
-                }
-                </ul>
-
-            </div>;
+            return <ul id="taskList">
+            {
+                this.createTaskListItems()
+            }
+            </ul>;
         }
 
         /***************************************************************************************************************
         *   Creates and returns all items of the task list.
+        *
+        *   @return {JSXTransformer[]} The rendered JSX elements.
         ***************************************************************************************************************/
         createTaskListItems()
         {
@@ -40,6 +39,8 @@
                 {
                     return <li key={ index }>
                         <div>
+
+                            { /* The item description */ }
                             { item }
 
                             { /* Button 'Delete' */ }

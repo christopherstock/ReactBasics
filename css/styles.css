@@ -30,10 +30,10 @@
         margin:             0 auto 0 auto;
         padding:            15px;
         width:              640px;
-        height:             150px;
+        height:             auto;
     }
 
-    input#userInput
+    input#newTask
     {
         width:              400px;
         height:             40px;
@@ -48,12 +48,12 @@
         margin-top:         15px;
     }
 
+    @keyframes fadeIn { from { opacity: 0.0; } to { opacity: 1.0; } }
+
     ul#taskList
     {
         list-style-type:    none;
     }
-
-    @keyframes fadeIn { from { opacity: 0.0; } to { opacity: 1.0; } }
 
     ul#taskList li
     {
@@ -64,7 +64,7 @@
         margin-top:         15px;
     }
 
-    ul#taskList li button
+    ul#taskList button
     {
         float:              right;
         line-height:        30px;
@@ -82,6 +82,12 @@
         background:         #cacaca;
     }
 
+    .input.error,
+    .input.error:focus
+    {
+        background:         #ff7086;
+    }
+
     .button
     {
         background:         #8c8c8c;
@@ -96,10 +102,4 @@
     .button:disabled
     {
         background:         #c5c5c5;
-    }
-
-    .error,
-    .error:focus
-    {
-        background:         #ff7086;
     }

@@ -1,6 +1,6 @@
 
     /*******************************************************************************************************************
-    *   Represents the Input component that creates new tasks.
+    *   Represents the input component that lets the user create new tasks.
     *   This is an example for a stateful component.
     *
     *   @author  Christopher Stock
@@ -11,51 +11,47 @@
         /***************************************************************************************************************
         *   Initializes this component by setting the initial state.
         *
-        *   @param props The initial properties being passed in the component tag.
+        *   @param {Object} props The initial properties being passed in the component tag.
         ***************************************************************************************************************/
         constructor( props )
         {
             super( props );
 
             this.state = {
-                error: false,
+                inputError: false,
             }
         }
 
         /***************************************************************************************************************
         *   Being invoked every time this component renders.
         *
-        *   @return The rendered JSX.
+        *   @return {JSXTransformer} The rendered JSX.
         ***************************************************************************************************************/
         render()
         {
             console.log( "TaskInput.render() being invoked" );
 
-            return <div>
-
-                <form onSubmit={ ( event ) => { this.onFormSubmit( event ); } }>
-                    <input id="userInput" type="text" maxLength="50" className={ ( this.state.error ? "input error" : "input" ) } />
-                    <br />
-                    <input id="submitButton" type="submit" value="Create Task" className="button" />
-                </form>
-
-            </div>;
+            return <form onSubmit={ ( event ) => { this.onFormSubmit( event ); } }>
+                <input id="newTask" type="text" maxLength="50" className={ ( this.state.inputError ? "input error" : "input" ) } />
+                <br />
+                <input id="submitButton" type="submit" value="Create Task" className="button" />
+            </form>;
         }
 
         /***************************************************************************************************************
         *   Being invoked when the form is submitted.
         *
-        *   @event The form submission event.
+        *   @param {Event} event The form submission event.
         ***************************************************************************************************************/
         onFormSubmit( event )
         {
+            console.log( "TaskInput.onFormSubmit being invoked" );
+
             // suppress page reload
             event.preventDefault();
 
-            console.log( "TaskInput.onFormSubmit being invoked" );
-
-            // get input field and entered text
-            let inputField  = document.getElementById( "userInput" );
+            // get input field and trim entered text
+            let inputField  = document.getElementById( "newTask" );
             let enteredText = inputField.value.trim();
 
             // clear input field
@@ -67,19 +63,19 @@
             {
                 console.log( "Empty text input detected." );
 
-                // set userInput class to 'error'
+                // set error state
                 this.setState(
                     {
-                        error: true,
+                        inputError: true,
                     }
                 );
             }
             else
             {
-                // reset userInput class
+                // clear error state
                 this.setState(
                     {
-                        error: false,
+                        inputError: false,
                     }
                 );
 
