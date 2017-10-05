@@ -19,6 +19,7 @@
 
             this.state = {
                 inputError: false,
+                inputText:  "",
             }
         }
 
@@ -32,10 +33,43 @@
             console.log( "TaskInput.render() being invoked" );
 
             return <form onSubmit={ ( event ) => { this.onFormSubmit( event ); } }>
-                <input id="newTask" type="text" maxLength="50" className={ ( this.state.inputError ? "input error" : "input" ) } />
+
+                <input
+                    id="newTask"
+                    type="text"
+                    maxLength="50"
+                    className={ this.state.inputError ? "input error" : "input" }
+                    value={     this.state.inputText }
+                    onChange={  ( event ) => { this.onInputChange( event ); } }
+                />
+
                 <br />
-                <input id="submitButton" type="submit" value="Create Task" className="button" />
+
+                <input
+                    id="submitButton"
+                    type="submit"
+                    value="Create Task"
+                    className="button"
+                />
+
             </form>;
+        }
+
+        /***************************************************************************************************************
+        *   Being invoked when the input field value changes.
+        *
+        *   @param {Event} event The event when the input field value changes.
+        ***************************************************************************************************************/
+        onInputChange( event )
+        {
+            console.log( "TaskInput.onInputChange being invoked" );
+
+            this.setState(
+                {
+                    inputError: false,
+                    inputText:  event.target.value,
+                }
+            );
         }
 
         /***************************************************************************************************************
@@ -50,12 +84,8 @@
             // suppress page reload
             event.preventDefault();
 
-            // get input field and trim entered text
-            let inputField  = document.getElementById( "newTask" );
-            let enteredText = inputField.value.trim();
-
-            // clear input field
-            inputField.value = "";
+            // trim entered text
+            let enteredText = this.state.inputText.trim();
 
             // check entered text
             console.log( "Trimmed text in the box is [" + enteredText + "]" );
@@ -67,6 +97,7 @@
                 this.setState(
                     {
                         inputError: true,
+                        inputText:  "",
                     }
                 );
             }
@@ -76,6 +107,7 @@
                 this.setState(
                     {
                         inputError: false,
+                        inputText:  "",
                     }
                 );
 

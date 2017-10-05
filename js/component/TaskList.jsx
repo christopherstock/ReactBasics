@@ -21,9 +21,9 @@
             document.getElementById( "mainContainer" ).style.height = ( 150 + ( this.props.taskList.length * 55 ) ) + "px";
 
             return <ul id="taskList">
-            {
-                this.createTaskListItems()
-            }
+
+                { this.createTaskListItems() }
+
             </ul>;
         }
 
@@ -38,6 +38,7 @@
                 function( item, index )
                 {
                     return <li key={ index }>
+
                         <div>
 
                             { /* The item description */ }
@@ -68,7 +69,9 @@
                             >
                                 &#9650;
                             </button>
+
                         </div>
+
                     </li>;
                 },
                 this
