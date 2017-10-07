@@ -213,20 +213,4 @@
         {
             console.log( "App.componentWillUnmount() being invoked" );
         }
-
-        /***************************************************************************************************************
-        *   Being invoked before this component has been unmounted.
-        *
-        *   @param {Object} nextProps   The props to set on updating.
-        *   @param {Object} nextState   The state to set on updating.
-        *   @param {Object} nextContext The context to set on updating.
-        *
-        *   @return {boolean} Specifies if this component should update referring to this method.
-        ***************************************************************************************************************/
-        shouldComponentUpdate( nextProps, nextState, nextContext )
-        {
-            console.log( "App.shouldComponentUpdate() being invoked" );
-
-            return true;
-        }
     }

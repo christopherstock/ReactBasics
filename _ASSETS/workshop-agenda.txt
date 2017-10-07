@@ -25,15 +25,22 @@
           some specific component, and any data or UI derived from that state can only affect components
           "below" them in the tree.
 
-          - TaskInput class
+          - callbacks to TaskList! ( buttons )
 
-    OK 6. Component Lifecycle callbacks
+    OK 6. Uncontrolled components:
+          Does not change state on altering input values.
+          But also suppresses the default HTML behaviour of opening a new URL on submitting the form.
+          Doesn't handle own state but
+
+          - TaskInput class ?
 
     OK 7. Controlled components:
           In a controlled component, form data is handled by a React component.
           A React component that renders a form and also controls what happens in that form on subsequent user input
           by supressing the default form behaviour of HTML that opens a new URL in the browser.
 
-    OK 8. Uncontrolled components:
-          Does not change state on altering input values.
-          But also suppresses the default HTML behaviour of opening a new URL on submitting the form.
+          - Turn TaskInput class into a controlled component!
+
+    OK 8. Component Lifecycle callbacks
+          - May be useful in special / advanced cases
+          - Normally not required

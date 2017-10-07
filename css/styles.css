@@ -41,7 +41,8 @@
         text-align:         center;
     }
 
-    input#submitButton
+    input#submitButton,
+    button#submitButton
     {
         height:             40px;
         margin-top:         15px;

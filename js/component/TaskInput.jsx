@@ -1,7 +1,7 @@
 
     /*******************************************************************************************************************
     *   Represents the input component that lets the user create new tasks.
-    *   This is an example for a stateful component.
+    *   This is an example for a stateful and controlled component.
     *
     *   @author  Christopher Stock
     *   @version 1.0
@@ -34,6 +34,7 @@
 
             return <form onSubmit={ ( event ) => { this.onFormSubmit( event ); } }>
 
+                { /* new task input */ }
                 <input
                     id="newTask"
                     type="text"
@@ -45,6 +46,7 @@
 
                 <br />
 
+                { /* new task button */ }
                 <input
                     id="submitButton"
                     type="submit"
