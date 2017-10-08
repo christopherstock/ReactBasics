@@ -34,15 +34,18 @@
         ***************************************************************************************************************/
         createTaskListItems()
         {
-            return this.props.taskList.map(
-                function( item, index )
-                {
-                    return <li key={ index }>
+            let items = [];
+
+            // browse all task list items
+            for ( let index = 0; index < this.props.taskList.length; ++index )
+            {
+                items.push(
+                    <li key={ index }>
 
                         <div>
 
                             { /* The item description */ }
-                            { item }
+                            { this.props.taskList[ index ] }
 
                             { /* Button 'Delete' */ }
                             <button
@@ -72,9 +75,10 @@
 
                         </div>
 
-                    </li>;
-                },
-                this
-            );
+                    </li>
+                );
+            }
+
+            return items;
         }
     }
