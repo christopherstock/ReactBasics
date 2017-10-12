@@ -22,17 +22,17 @@
 
             return <ul id="taskList">
 
-                { this.createTaskListItems() }
+                { this.createItems() }
 
             </ul>;
         }
 
         /***************************************************************************************************************
-        *   Creates and returns all items of the task list.
+        *   Creates and returns all items for the task list.
         *
         *   @return {JSXTransformer[]} The rendered JSX elements.
         ***************************************************************************************************************/
-        createTaskListItems()
+        createItems()
         {
             let items = [];
 
@@ -42,38 +42,34 @@
                 items.push(
                     <li key={ index }>
 
-                        <div>
+                        { /* The item description */ }
+                        { this.props.taskList[ index ] }
 
-                            { /* The item description */ }
-                            { this.props.taskList[ index ] }
+                        { /* Button 'Delete' */ }
+                        <button
+                            onClick={ () => { this.props.onTaskDelete( index ); } }
+                            className="button"
+                        >
+                            &#10006;
+                        </button>
 
-                            { /* Button 'Delete' */ }
-                            <button
-                                onClick={ () => { this.props.onTaskDelete(   index ); } }
-                                className="button"
-                            >
-                                &#10006;
-                            </button>
+                        { /* Button 'Move Down' */ }
+                        <button
+                            onClick={ () => { this.props.onTaskMoveDown( index ); } }
+                            disabled={ index === this.props.taskList.length - 1 }
+                            className="button"
+                        >
+                            &#9660;
+                        </button>
 
-                            { /* Button 'Move Down' */ }
-                            <button
-                                onClick={ () => { this.props.onTaskMoveDown( index ); } }
-                                disabled={ index === this.props.taskList.length - 1 }
-                                className="button"
-                            >
-                                &#9660;
-                            </button>
-
-                            { /* Button 'Move Up' */ }
-                            <button
-                                onClick={ () => { this.props.onTaskMoveUp(   index ); } }
-                                disabled={ index === 0 }
-                                className="button"
-                            >
-                                &#9650;
-                            </button>
-
-                        </div>
+                        { /* Button 'Move Up' */ }
+                        <button
+                            onClick={ () => { this.props.onTaskMoveUp( index ); } }
+                            disabled={ index === 0 }
+                            className="button"
+                        >
+                            &#9650;
+                        </button>
 
                     </li>
                 );

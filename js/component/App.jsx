@@ -176,7 +176,7 @@
         }
 
         /***************************************************************************************************************
-        *   Being invoked before this component has been unmounted.
+        *   Being invoked before this component has been updated.
         *
         *   @param {Object} nextProps   The props to set on updating.
         *   @param {Object} nextState   The state to set on updating.
